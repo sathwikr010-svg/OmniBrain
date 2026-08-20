@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import {
   UserRound,
   Mail,
@@ -12,7 +12,7 @@ import {
 
 import "./Signup.css";
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function Signup() {
   const [username, setUsername] = useState("");
@@ -610,7 +610,7 @@ function Signup() {
       <footer className="signup-footer">
 
         <span>
-          © 2026 OmniBrain
+          Â© 2026 OmniBrain
         </span>
 
         <span>
@@ -624,3 +624,4 @@ function Signup() {
 }
 
 export default Signup;
+

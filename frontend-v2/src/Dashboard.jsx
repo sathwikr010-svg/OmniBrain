@@ -1,4 +1,4 @@
-import {
+﻿import {
   useCallback,
   useEffect,
   useMemo,
@@ -34,7 +34,7 @@ import {
 
 import "./Dashboard.css";
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const DEFAULT_REFRESH_SETTINGS = {
   autoRefresh: true,
@@ -970,7 +970,7 @@ function Dashboard() {
                   ? `${agentName.slice(
                       0,
                       12
-                    )}…`
+                    )}â€¦`
                   : agentName,
 
               value:
@@ -1392,7 +1392,7 @@ function Dashboard() {
               </span>
 
               <small>
-                🔒 Enterprise Security
+                ðŸ”’ Enterprise Security
               </small>
 
             </div>
@@ -1732,7 +1732,7 @@ function Dashboard() {
                 </h3>
 
                 <small>
-                  {idleAgents} idle ·{" "}
+                  {idleAgents} idle Â·{" "}
                   {errorAgents} errors
                 </small>
 
@@ -2689,7 +2689,7 @@ function Dashboard() {
             <footer className="ob-footer">
 
               <span>
-                © 2026 OmniBrain Intelligence Platform
+                Â© 2026 OmniBrain Intelligence Platform
               </span>
 
               <span>
@@ -2770,3 +2770,4 @@ function Dashboard() {
 }
 
 export default Dashboard;
+

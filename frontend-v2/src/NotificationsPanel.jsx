@@ -1,4 +1,4 @@
-import {
+﻿import {
   CheckCircle2,
   AlertTriangle,
   X,
@@ -12,7 +12,7 @@ import {
   useState,
 } from "react";
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function NotificationPanel({ onClose }) {
   const [notifications, setNotifications] =
@@ -862,3 +862,4 @@ function NotificationPanel({ onClose }) {
 }
 
 export default NotificationPanel;
+

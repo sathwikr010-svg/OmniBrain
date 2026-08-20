@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+﻿import { useCallback, useEffect, useMemo, useState } from "react";
 
 import {
   BarChart3,
@@ -12,7 +12,7 @@ import {
   Clock3,
 } from "lucide-react";
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function Analytics() {
   const [analytics, setAnalytics] = useState(null);
@@ -1173,7 +1173,7 @@ function Analytics() {
                                     "#c3c9d2",
                                 }}
                               >
-                                •
+                                â€¢
                               </span>
 
                               <span
@@ -1749,3 +1749,4 @@ function Analytics() {
 }
 
 export default Analytics;
+

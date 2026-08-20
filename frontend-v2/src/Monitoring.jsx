@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 
 import {
   Activity,
@@ -14,7 +14,7 @@ import {
   AlertTriangle,
 } from "lucide-react";
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const DEFAULT_REFRESH_SETTINGS = {
   autoRefresh: true,
@@ -827,7 +827,7 @@ function Monitoring() {
                 fontWeight: 700,
               }}
             >
-              ● Live
+              â— Live
             </span>
 
           </div>
@@ -1187,7 +1187,7 @@ function Monitoring() {
                   fontSize: "10px",
                 }}
               >
-                ● {value}
+                â— {value}
               </span>
 
             </div>
@@ -1264,3 +1264,4 @@ function Monitoring() {
 }
 
 export default Monitoring;
+

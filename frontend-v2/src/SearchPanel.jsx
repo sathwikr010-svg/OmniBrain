@@ -1,4 +1,4 @@
-import {
+﻿import {
   useEffect,
   useMemo,
   useState,
@@ -18,7 +18,7 @@ import {
   Loader2,
 } from "lucide-react";
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function SearchPanel({
   onClose,
@@ -333,7 +333,7 @@ function SearchPanel({
           title: name,
           description,
           category:
-            `AI Agent • ${status}`,
+            `AI Agent â€¢ ${status}`,
           icon: Bot,
           menu: "AI Agents",
           keywords: [
@@ -384,7 +384,7 @@ function SearchPanel({
             `knowledge-${document?.id || index}`,
           title: name,
           description:
-            `${type || "Document"} • ${chunks} chunks • ${status}`,
+            `${type || "Document"} â€¢ ${chunks} chunks â€¢ ${status}`,
           category:
             "Knowledge",
           icon: Database,
@@ -437,7 +437,7 @@ function SearchPanel({
       title:
         "System Monitoring",
       description:
-        `${agents.length} agents • ${statistics.active_agents ?? 0} active`,
+        `${agents.length} agents â€¢ ${statistics.active_agents ?? 0} active`,
       category: "Monitoring",
       icon: Activity,
       menu: "Monitoring",
@@ -1021,3 +1021,4 @@ function SearchPanel({
 }
 
 export default SearchPanel;
+

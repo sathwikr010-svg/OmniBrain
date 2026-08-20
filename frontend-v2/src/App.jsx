@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 
 import {
   Eye,
@@ -16,7 +16,7 @@ import "./App.css";
 import Dashboard from "./Dashboard";
 import Signup from "./Signup";
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function App() {
   // ============================================================
@@ -185,7 +185,7 @@ function App() {
   };
 
   // ============================================================
-  // SIGN UP → LOGIN
+  // SIGN UP â†’ LOGIN
   // ============================================================
 
   const handleSignupSuccess = () => {
@@ -627,7 +627,7 @@ function App() {
       <footer>
 
         <span>
-          © 2026 OmniBrain
+          Â© 2026 OmniBrain
         </span>
 
         <span>
@@ -641,3 +641,4 @@ function App() {
 }
 
 export default App;
+

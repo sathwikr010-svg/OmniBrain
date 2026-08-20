@@ -1,4 +1,4 @@
-import {
+﻿import {
   Database,
   FileText,
   Search,
@@ -21,7 +21,7 @@ import {
   useState,
 } from "react";
 
-const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 
 const ALLOWED_EXTENSIONS = [
@@ -560,7 +560,7 @@ function Knowledge() {
 
 
         setMessage(
-          `✓ ${uploadedName} uploaded and indexed successfully.`
+          `âœ“ ${uploadedName} uploaded and indexed successfully.`
         );
 
 
@@ -680,7 +680,7 @@ function Knowledge() {
         /* SUCCESS */
 
         setMessage(
-          `✓ ${document.name} deleted successfully.`
+          `âœ“ ${document.name} deleted successfully.`
         );
 
 
@@ -2191,3 +2191,4 @@ function Knowledge() {
 
 
 export default Knowledge;
+

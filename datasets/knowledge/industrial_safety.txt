@@ -1,0 +1,158 @@
+OMNIBRAIN INDUSTRIAL SAFETY KNOWLEDGE BASE
+
+1. GENERAL INDUSTRIAL SAFETY
+
+Industrial safety focuses on preventing injuries, equipment damage, environmental incidents, and operational disruptions.
+
+All personnel must follow approved safety procedures, wear required personal protective equipment (PPE), and report unsafe conditions immediately.
+
+Common workplace hazards include:
+- Moving machinery
+- Electrical equipment
+- Fire and explosion risks
+- Chemical exposure
+- Slips, trips, and falls
+- High temperature surfaces
+- Pressure systems
+- Confined spaces
+- Working at height
+
+2. PERSONAL PROTECTIVE EQUIPMENT
+
+Required PPE depends on the work environment and hazard.
+
+Common PPE includes:
+- Safety helmet
+- Safety glasses
+- Protective gloves
+- Safety shoes
+- Hearing protection
+- Face shields
+- Respiratory protection
+- High-visibility clothing
+
+PPE must be inspected before use and replaced when damaged.
+
+3. MACHINE SAFETY
+
+Operators must never bypass machine guards or safety interlocks.
+
+Before maintenance, inspection, or repair, the machine should be isolated from its energy sources using an approved Lockout/Tagout procedure.
+
+Emergency stop controls should remain accessible and functional.
+
+4. ELECTRICAL SAFETY
+
+Only authorized and qualified personnel should work on electrical systems.
+
+Before electrical maintenance:
+- Isolate the power source.
+- Apply Lockout/Tagout.
+- Verify that the equipment is de-energized.
+- Use appropriate electrical PPE.
+- Follow approved electrical safety procedures.
+
+Damaged cables, exposed conductors, sparks, or unusual electrical smells must be reported immediately.
+
+5. FIRE SAFETY
+
+Fire risks may involve combustible materials, electrical equipment, flammable liquids, gases, or high-temperature processes.
+
+Employees should know:
+- Emergency exits
+- Fire alarm locations
+- Fire extinguisher locations
+- Emergency assembly areas
+
+Fire extinguishers should only be used by trained personnel when it is safe to do so.
+
+6. CHEMICAL SAFETY
+
+Chemical containers must be properly labelled and stored according to their hazards.
+
+Safety Data Sheets should be available for hazardous chemicals.
+
+Personnel handling chemicals must use appropriate PPE and follow approved handling and storage procedures.
+
+Chemical spills must be reported immediately and handled according to the site's emergency response procedure.
+
+7. CONFINED SPACE SAFETY
+
+Confined spaces may contain toxic gases, oxygen-deficient atmospheres, or other dangerous conditions.
+
+Entry should only occur under an approved confined-space procedure.
+
+Required controls may include:
+- Atmospheric testing
+- Ventilation
+- Permit authorization
+- Communication
+- Rescue planning
+- Appropriate PPE
+
+8. WORKING AT HEIGHT
+
+Personnel working at height must use approved fall-protection systems where required.
+
+Ladders, scaffolds, platforms, and harnesses must be inspected before use.
+
+Never use damaged fall-protection equipment.
+
+9. INCIDENT REPORTING
+
+All accidents, near misses, unsafe conditions, and equipment-related incidents should be reported promptly.
+
+Incident information should include:
+- Date and time
+- Location
+- People involved
+- Description of the event
+- Equipment involved
+- Immediate actions taken
+- Possible contributing factors
+
+10. EMERGENCY RESPONSE
+
+During an emergency, personnel should remain calm and follow the site's emergency response plan.
+
+If an alarm is activated:
+- Stop work when safe.
+- Follow evacuation instructions.
+- Move to the designated assembly point.
+- Do not re-enter until authorized.
+
+11. PREDICTIVE MAINTENANCE
+
+Industrial equipment can be monitored using parameters such as:
+- Temperature
+- Vibration
+- Pressure
+- Current
+- Voltage
+- Noise
+- Flow rate
+
+Abnormal trends may indicate developing equipment problems.
+
+Predictive maintenance can help identify potential failures before they cause unplanned downtime.
+
+12. MACHINE ANOMALIES
+
+Examples of abnormal machine behavior include:
+- Excessive vibration
+- Unusual temperature increase
+- Unexpected noise
+- Pressure fluctuations
+- Increased energy consumption
+- Repeated alarms
+- Unexpected shutdowns
+
+An anomaly should be investigated using approved operational and maintenance procedures.
+
+13. SAFETY PRINCIPLE
+
+OmniBrain should provide safety information as decision-support guidance.
+
+For serious or emergency situations, users must follow their organization's approved emergency procedures and contact qualified safety or emergency personnel.
+
+OmniBrain must not claim that an AI recommendation replaces professional safety judgment, site procedures, regulations, or authorized personnel.

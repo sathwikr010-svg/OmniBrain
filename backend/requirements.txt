@@ -21,3 +21,4 @@ opencv-python
 requests
 pypdf
 python-docx
+bcrypt==5.0.0

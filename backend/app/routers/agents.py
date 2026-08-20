@@ -1,4 +1,5 @@
 from datetime import datetime
+import os
 import re
 
 import requests
@@ -33,15 +34,39 @@ router = APIRouter(
 # ============================================================
 # OLLAMA CONFIGURATION
 # ============================================================
+#
+# Local development:
+#   Uses Ollama running on this computer.
+#
+# Production/deployment:
+#   OLLAMA_URL, OLLAMA_TAGS_URL, OLLAMA_MODEL and
+#   OLLAMA_TIMEOUT can be supplied through environment variables.
+#
+# This keeps the existing local Ollama setup working while
+# making OmniBrain ready for deployment.
+# ============================================================
 
-OLLAMA_URL = "http://127.0.0.1:11434/api/generate"
+OLLAMA_URL = os.getenv(
+    "OLLAMA_URL",
+    "http://127.0.0.1:11434/api/generate",
+)
 
-OLLAMA_TAGS_URL = "http://127.0.0.1:11434/api/tags"
+OLLAMA_TAGS_URL = os.getenv(
+    "OLLAMA_TAGS_URL",
+    "http://127.0.0.1:11434/api/tags",
+)
 
-OLLAMA_MODEL = "llama3.2"
+OLLAMA_MODEL = os.getenv(
+    "OLLAMA_MODEL",
+    "llama3.2",
+)
 
-# Local LLMs may take longer during the first request.
-OLLAMA_TIMEOUT = 300
+OLLAMA_TIMEOUT = int(
+    os.getenv(
+        "OLLAMA_TIMEOUT",
+        "300",
+    )
+)
 
 
 # ============================================================
@@ -85,8 +110,7 @@ def clean_source_name(source: str) -> str:
 
     source = str(source).strip()
 
-    # Remove UUID format:
-    # xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx_
+    # Remove UUID format
     source = re.sub(
         r"^[a-fA-F0-9]{8}-"
         r"[a-fA-F0-9]{4}-"
@@ -97,8 +121,7 @@ def clean_source_name(source: str) -> str:
         source,
     )
 
-    # Remove 32-character hexadecimal hash:
-    # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx_
+    # Remove 32-character hexadecimal hash
     source = re.sub(
         r"^[a-fA-F0-9]{32}_",
         "",
@@ -116,15 +139,6 @@ def clean_ai_response_sources(response: str) -> str:
     """
     Remove internal document IDs/hashes from
     the AI-generated response.
-
-    This prevents users from seeing internal
-    filenames such as:
-
-    4dac2f005c7e4c7b9f9859f11d098ef9_file.txt
-
-    and converts them to:
-
-    file.txt
     """
 
     if not response:
@@ -586,8 +600,6 @@ def execute_agent_task(
                 "Unknown",
             )
 
-            # IMPORTANT:
-            # Never expose internal source IDs.
             source = clean_source_name(
                 raw_source
             )
@@ -842,11 +854,6 @@ ANSWER:
         # 10. CLEAN AI RESPONSE
         # ====================================================
 
-        # IMPORTANT:
-        # Even though the prompt tells the model not
-        # to expose internal IDs, we clean the final
-        # response as a final safety layer.
-
         result = clean_ai_response_sources(
             result
         )
@@ -875,20 +882,12 @@ ANSWER:
 
         return {
             "agent_id": agent.id,
-
             "agent_name": agent.name,
-
             "status": agent.status,
-
             "task": task,
-
             "result": result,
-
             "tasks_processed": agent.tasks,
-
             "last_activity": agent.last_activity,
-
-            # Clean human-readable source names only.
             "sources": sources,
         }
 
